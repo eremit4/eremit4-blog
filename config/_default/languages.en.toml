@@ -1,0 +1,34 @@
+languageCode = "en"
+languageName = "English"
+weight = 1
+title = "The Sage Hollow"
+
+[params]
+  displayName = "EN"
+  isoCode = "en"
+  rtl = false
+  dateFormat = "2 January 2006"
+  logo = "img/ghost.gif"
+  description = "A blog about threats"
+  # secondaryLogo = "img/secondary-logo.png"
+  # copyright = "Copy, _right?_ :thinking_face:"
+
+[params.author]
+  name = "eremit4"
+  image = "img/home2.png"
+headline = """<div class='intro-text'>
+  <span class='line1'>Welcome, stranger.</span><br>
+  <span class='line2'>You’ve reached my quiet refuge at the edge of the digital wilderness — where shadows are studied, not feared.</span>
+</div>"""
+  links = [
+    { github = "https://github.com/eremit4" },
+    { x-twitter = "https://x.com/_eremit4" },
+  ]
+  #   email = "youremail@example.com"
+  #   imageQuality = 96
+  #   bio = "A little bit about you"
+
+[params.assets]
+  customCSS = ["css/theshadowslight.css"]
+  customJS = []
+  fonts = ["https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&display=swap"]

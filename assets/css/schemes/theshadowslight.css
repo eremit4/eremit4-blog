@@ -1,0 +1,187 @@
+/* ============================================================
+   THE SHADOWS LIGHT — Biohazard Scheme (Code-Friendly Edition)
+   Cleaned & Organized Version
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   ROOT COLOR VARIABLES
+   ------------------------------------------------------------ */
+:root {
+  /* Global background & text */
+  --color-background: 0, 0, 0;           /* Pure black */
+  --color-neutral:   255, 255, 255;      /* White */
+
+  /* Gunmetal greys */
+  --color-neutral-50:  250, 250, 250;
+  --color-neutral-100: 245, 245, 245;
+  --color-neutral-200: 229, 229, 229;
+  --color-neutral-300: 212, 212, 216;
+  --color-neutral-400: 163, 163, 170;
+  --color-neutral-500: 113, 113, 122;
+  --color-neutral-600:  82,  82,  91;
+  --color-neutral-700:  63,  63,  70;
+  --color-neutral-800:  47,  56,  67;    /* Card background */
+  --color-neutral-900:   0,   0,   0;    /* Deep black */
+
+  /* PRIMARY — MAGENTA NEON */
+  --color-primary-50:  245, 230, 255;
+  --color-primary-100: 230, 200, 255;
+  --color-primary-200: 210, 165, 255;
+  --color-primary-300: 190, 135, 255;
+  --color-primary-400: 170, 110, 255;
+  --color-primary-500: 150,  80, 255;    /* Main magenta */
+  --color-primary-600: 125,  60, 235;
+  --color-primary-700: 100,  40, 210;
+  --color-primary-800:  80,  25, 180;
+  --color-primary-900:  60,  15, 140;
+
+  /* Deep slate (secondary tones) */
+  --color-secondary-500:  71,  85, 105;
+  --color-secondary-700:  30,  41,  59;
+  --color-secondary-800:  15,  23,  42;
+  --color-secondary-900:   8,  12,  24;
+
+  /* Code syntax colors */
+  --code-string: 140, 255, 230;     /* Soft aqua */
+  --code-keyword: 220, 120, 255;    /* Neon fuchsia */
+  --code-function: 120, 220, 255;   /* Electric cyan */
+  --code-type: 180, 160, 255;       /* Lavender neon */
+  --code-number: 210, 255, 140;     /* Soft lime */
+  --code-operator: 235, 235, 240;   /* Light neutral gray */
+  --code-comment: 130, 135, 150;    /* Cool slate */
+  --code-highlight-line: 24, 16, 40; /* Soft purple haze */
+}
+
+/* ------------------------------------------------------------
+   GLOBAL BACKGROUND & FONT
+   ------------------------------------------------------------ */
+
+body {
+  background: rgb(var(--color-background));
+}
+
+body, html {
+  font-family: "EB Garamond", serif !important; /* Global gothic-like font */
+}
+
+/* ------------------------------------------------------------
+   CARD HOVER + GLITCH EFFECTS
+   ------------------------------------------------------------ */
+
+article.relative {
+  position: relative !important;
+  overflow: hidden !important;
+  transition: all 0.25s ease-out !important;
+  border-color: rgba(var(--color-primary-500), 0.35) !important;
+}
+
+/* Real hover glow */
+article.relative:hover {
+  border-color: rgb(var(--color-primary-500)) !important;
+  box-shadow:
+    0 0 12px rgba(var(--color-primary-500), 0.9),
+    0 0 18px rgba(80, 20, 150, 0.5) inset !important;
+  transform: translateY(-4px) scale(1.02);
+}
+
+/* Image glitching */
+article.relative:hover img {
+  filter: contrast(130%) saturate(150%) hue-rotate(10deg);
+  transform: translateX(-3px) skewX(-2deg) scale(1.02);
+  transition: all 0.15s ease-out !important;
+}
+
+/* Layered glitch pulses */
+article.relative::before,
+article.relative::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  background: rgba(var(--color-primary-500), 0.3);
+  transition: opacity 0.15s ease-out, transform 0.15s ease-out;
+}
+
+article.relative:hover::before {
+  opacity: 0.18;
+  transform: translateX(2px);
+}
+
+article.relative:hover::after {
+  opacity: 0.12;
+  transform: translateX(-2px);
+}
+
+/* Force white titles on cards */
+article.relative h2,
+article.relative h3 {
+  color: white !important;
+}
+
+
+/* ------------------------------------------------------------
+   AUTHOR AVATAR — RESIZE & STYLE
+   ------------------------------------------------------------ */
+
+img.profile-avatar,
+.profile img,
+.single .profile img,
+.author .avatar,
+img[alt="eremit4"] {
+  width: 200px !important;
+  height: 200px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+}
+
+/* ------------------------------------------------------------
+   CUSTOM HEADLINE BLOCK
+   ------------------------------------------------------------ */
+
+.intro-text {
+  max-width: 580px;                  /* More compact look */
+  margin: 18px auto 0 auto !important; /* Distance above + centered */
+  line-height: 1.28 !important;       /* Cinematic spacing */
+  font-family: "EB Garamond", serif;
+  font-size: 1.25rem;
+  color: rgba(255,255,255,0.85);
+}
+
+/* Line 1 (Welcome, stranger.) */
+.intro-text .line1 {
+  font-size: 1.45rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 2px !important;
+  color: rgb(255,255,255);
+}
+
+/* Line 2 */
+.intro-text .line2 {
+  font-weight: 400;
+  color: rgba(255,255,255,0.75);
+}
+
+/* ------------------------------------------------------------
+   HIDE AUTHOR NAME UNDER AVATAR (HOME HERO)
+   ------------------------------------------------------------ */
+
+img.rounded-full + h1.mb-2.text-4xl.font-extrabold {
+  display: none !important;
+}
+
+/* ==========================================
+   GLOBAL FONT SIZE ADJUSTMENT (EB Garamond)
+   ========================================== */
+
+html {
+    font-size: 19px !important; /* default ~16px → upgrade */
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 20px !important; /* larger screens */
+    }
+}
