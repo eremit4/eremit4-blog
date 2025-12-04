@@ -8,10 +8,7 @@ title = "The Sage Hollow"
   isoCode = "en"
   rtl = false
   dateFormat = "2 January 2006"
-  logo = "img/ghost.gif"
-  description = "A blog about threats"
-  # secondaryLogo = "img/secondary-logo.png"
-  # copyright = "Copy, _right?_ :thinking_face:"
+  logo = "img/cave.png"
 
 [params.author]
   name = "eremit4"
@@ -32,3 +29,4 @@ headline = """<div class='intro-text'>
   customCSS = ["css/theshadowslight.css"]
   customJS = []
   fonts = ["https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&display=swap"]
+  favicon = "img/favicon.ico"

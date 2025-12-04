@@ -185,3 +185,18 @@ html {
         font-size: 20px !important; /* larger screens */
     }
 }
+
+/* ============================================================
+   Force size for featured images across all single pages
+   (About page, posts, and any layout variation in Blowfish)
+   Adjust width manually as desired.
+   ============================================================ */
+
+/* Force size specifically for cave.png anywhere it appears */
+img[src*="cave.png"] {
+  width: 65px !important;   /* ← adjust manually */
+  height: auto !important;
+  display: block !important;
+  margin: 0 auto !important;
+}
+

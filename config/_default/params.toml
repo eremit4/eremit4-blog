@@ -178,25 +178,9 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
 [advertisement]
   # adsense = ""
 
-#[params.homepage]
-#  layout = "background"
-#  showRecent = true
-#  showRecentItems = 3
-#  showMoreLink = true
-#  showMoreLinkDest = "/posts/"
-#  cardView = true
-#  cardViewScreenWidth = false
-#  layoutBackgroundBlur = true
-#  disableHeroImageFilter = false
-#
-#[params.author]
-#  name = "eremit4"
-#  image = "img/eremit4.png"
-#  headline = "Highlighting the digital darkness"
-#  links = [
-#    { github = "https://github.com/eremit4" },
-#    { x-twitter = "https://x.com/_eremit4" }
-#  ]
-
 [params.assets]
   fonts = ["https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&display=swap"]
+  favicon = "favicon.ico"
+
+
+
