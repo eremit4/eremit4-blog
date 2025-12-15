@@ -52,7 +52,7 @@ Signatures like this are extremely valuable for pivoting. They allow the creatio
 
 ## Tracking the Toad
 
-The answer the first question, we must use some signals to track the toads in the wild. So I created a Saved Search in URLScan to monitor the submission of URLs with the string "🍄🍄0UTL🍄🍄" being part of the their content, and the result was very interesting.
+To answer the first question, I needed reliable signals to track the toads in the wild. I began by creating a saved search in URLScan to monitor submissions where the string “🍄🍄0UTL🍄🍄” appeared within page content. The results were immediately revealing.
 
 {{< figure
     src="img/hispanic-toad-2.webp"
@@ -61,14 +61,19 @@ The answer the first question, we must use some signals to track the toads in th
     class="mx-auto"
 >}}
 
-We wont attribute that the operator starts in March 2025 due to our limited visibility, but it is the first evidence that URLScan gave me and returns 75 results since them. This first query is sufficient to answer partially the first question:
+Based on the data available, the earliest observable activity dates back to March 2025. This does not necessarily indicate the true start of the operation — only the limits of current visibility. Nevertheless, URLScan alone returned 75 distinct results containing this signature, which is sufficient to partially answer the first guiding question:
 
 > **1) Is this an isolated deployment or evidence of a coordinated campaign operated by the same actor?**
->> A: This is coordinated campaign, targeting Outlook users, but we don't have sufficient evidences that indicates that we are talking about the same threat actor (TA).
+>> Answer: The evidence strongly suggests a coordinated campaign targeting Microsoft Outlook users. However, at this stage, there is not enough information to confidently attribute all deployments to a single threat actor.
 
-As a natural next step, I checked all the results of this campaign to evaluate their code, infrastructure, and other evidences that could create others relantioship and answer tother qustions as well. Inspecting the code, some points catch my mind: 
-- We have two different kits with the same toad signature: one use telegram through **tlgram.js** script to exfiltration, and another use discord through **disBLOCK.js** as exfiltration infraestructure;
-- The structure of the code seems that was developed with AI assistance;
+With that initial assessment in place, the next logical step was to analyze each identified deployment in greater depth, focusing on code structure, exfiltration mechanisms, and infrastructure reuse. This deeper inspection revealed several notable patterns.
+
+First, despite sharing the same toad-based signature, the campaign consists of two distinct phishing kit variants:
+
+- One variant exfiltrates stolen credentials via Telegram, using a script named **tlgram.js**.
+- The other variant relies on Discord webhooks for exfiltration, implemented through a script named **disBLOCK.js**.
+
+Second, the overall structure and coding style across both variants strongly suggest AI-assisted development. The logic is verbose, modular, and unusually consistent for low-level phishing kits, with repetitive patterns that resemble machine-generated scaffolding rather than handcrafted code.
 
   {{< figure
       src="img/hispanic-toad-3.webp"
@@ -83,7 +88,9 @@ As a natural next step, I checked all the results of this campaign to evaluate t
       class="mx-auto"
   >}}
 
-- both versions use ipify and ipinfo to collect IP address and geolocation data from the victims
+Finally, both variants implement the same victim profiling techniques. Each kit collects the victim’s public IP address and geolocation data by querying ipify and ipinfo, enriching the stolen credentials with contextual metadata before exfiltration.
+
+This convergence of signatures, tooling choices, and data collection methods reinforces the hypothesis of a shared operational lineage — even if definitive attribution remains out of reach for now.
 
 {{< figure
     src="img/hispanic-toad-3.webp"
