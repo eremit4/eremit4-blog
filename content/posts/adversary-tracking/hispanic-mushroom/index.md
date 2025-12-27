@@ -1,5 +1,5 @@
 ---
-title: "Unmasking ToadKit: Exposing a Hispanic Credential Theft Operation"
+title: "La Micelia e El Mago: Tracing a Spanish-Speaking Credential Theft Operation"
 date: 2025-12-04
 draft: false
 featuredImage: "toad-cover.png"
@@ -20,7 +20,7 @@ categories: ["Adversary Tracking"]
 
 ## Introduction
 
-In this scroll, I record the beginning of a hunt that took shape in August 2025, when early signs of a Hispanic-focused phishing kit surfaced from obscurity. What followed revealed clear targeting patterns, operational fingerprints, and subtle indicators of AI-assisted development, along with the use of Telegram and Discord as command-and-control channels — a trend increasingly common in the wild.
+In this scroll, I record the beginning of a hunt that took shape in August 2025, when early signs of a Spanish-speaking phishing kit surfaced from obscurity. What followed revealed clear targeting patterns, operational fingerprints, and subtle indicators of AI-assisted development, along with the use of Telegram and Discord as command and control channels — a trend increasingly common in the wild.
 
 ## Where the Trail Begins
 
@@ -88,13 +88,8 @@ Second, the overall structure and coding style across both variants strongly sug
       class="mx-auto"
   >}}
 
-Finally, both variants implement the same victim profiling techniques. Each kit collects the victim’s public IP address and geolocation data by querying ipify and ipinfo, enriching the stolen credentials with contextual metadata before exfiltration.
+Finally, both variants implement the same victim profiling techniques. Each kit collects the victim’s public IP address and geolocation data by querying **ipify** and **ipinfo**, enriching the stolen credentials with contextual metadata before exfiltration.
 
 This convergence of signatures, tooling choices, and data collection methods reinforces the hypothesis of a shared operational lineage — even if definitive attribution remains out of reach for now.
 
-{{< figure
-    src="img/hispanic-toad-3.webp"
-    alt="hispanic-toad-3"
-    figclass="text-center"
-    class="mx-auto"
->}}
+So after that, I improved the query with these two exfiltration scripts and 
