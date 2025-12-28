@@ -1,6 +1,6 @@
 ---
 title: "The Mycelial Mage: Tracing a Spanish-Speaking Credential Theft Operation"
-date: 2025-12-04
+date: 2025-12-27
 draft: false
 featuredImage: "mycelial-mage-cover.png"
 region: ["LATAM", "EU"]
@@ -14,7 +14,7 @@ tags:
     "discord",
     "credential-theft",
     "javascript",
-    "hypergraph"
+    "python"
   ]
 categories: ["Adversary Tracking"]
 ---
@@ -183,7 +183,7 @@ With the operational questions answered and the mechanics of the kit laid bare, 
 
 Rather than pursuing immediate attribution, the next objective became structural mapping. A URLScan saved search created during this investigation was preserved locally and normalized into a structured dataset, consolidating scan results, script variants, domains, hosting indicators, and exfiltration endpoints into a single CSV.
 
-At this stage, the dataset serves an analytical role. Its purpose is to expose structural relationships that are difficult to observe through linear inspection of indicators. After normalization and deduplication, the remaining data represents a reduced but meaningful projection of the operation’s exposed infrastructure surface. From this corpus, a custom graph was built to reflect how phishing infrastructure is provisioned and reused in practice. The model enforces a clear hierarchy of `Autonomous System → Hosting IP → Phishing Domain → Exfiltration Endpoint`, ensuring that correlations emerge from shared artifacts rather than inflated connectivity.
+At this stage, the dataset serves an analytical role, exposing structural relationships that are difficult to observe through linear inspection of indicators. After normalization and deduplication, the remaining data reflects a reduced yet meaningful projection of the operation’s exposed infrastructure surface. Using this corpus, I built a custom graph in Python to model how phishing infrastructure is provisioned and reused in practice, enforcing a hierarchy of `Autonomous System → Hosting IP → Phishing Domain → Exfiltration Endpoint` so that correlations arise from shared artifacts rather than inflated connectivity.
 
 <div class="sage-graph">
   <iframe
@@ -205,7 +205,7 @@ This scroll was not written to name an actor, but to understand a system.
 
 The investigation focused on exposing how a Spanish-speaking phishing kit operates in practice: how credentials are captured, how exfiltration channels evolve, and how infrastructure is provisioned, segmented, and selectively reused. Across multiple deployments, the evidence points to a service-oriented ecosystem rather than isolated or bespoke campaigns.
 
-Disposable hosting layers coexist with reused exfiltration endpoints, a pattern consistent with phishing-as-a-service models. Structural overlap is observable without requiring assumptions about centralized control or shared operators. TThe data supports correlation at the tooling and service level, not attribution of specific actors.
+Disposable hosting layers coexist with reused exfiltration endpoints, a pattern consistent with phishing-as-a-service models. Structural overlap is observable without requiring assumptions about centralized control or shared operators. The data supports correlation at the tooling and service level, not attribution of specific actors.
 
 This boundary is intentional. While future work may pivot on strings, linguistic markers, or underground reuse to explore actor identity, this scroll remains confined to mechanics and infrastructure. Understanding how the operation functions is a prerequisite for any attempt to understand who stands behind it.
 
@@ -213,7 +213,7 @@ The roots mapped here do not yet resolve into a single mycelium. They form a net
 
 ## Infrastructure Artifacts
 
-These indicators of compromise (IOCs) were collected during this study and served as the basis for the hypergraph presented in the *Following the Cursed Roots* section.
+The dataset served below is composed of indicators of compromise (IOCs) collected during the hunt and forms the basis for the hypergraph presented in the Following the Cursed Roots section.
 
 - [Full dataset](https://raw.githubusercontent.com/eremit4/eremit4-graphs/refs/heads/main/mycelial-mage/mycelial-mage-dataset.csv)
 - **Format:** CSV
