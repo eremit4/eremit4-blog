@@ -1,6 +1,6 @@
 ---
 title: "When the Checkout Bleeds: An Analysis of Skimming Campaigns in LATAM"
-date: 2026-01-20
+date: 2026-01-29
 draft: false
 featuredImage: "digital-skimming-latam-cover.png"
 region: ["LATAM"]
@@ -13,7 +13,7 @@ tags:
     "command-and-control",
     "websocket",
     "javascript",
-    "fincrime"
+    "stealer-logs"
   ]
 categories: ["Adversary Tracking"]
 ---
