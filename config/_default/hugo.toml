@@ -5,6 +5,8 @@
 theme = "blowfish" 
 baseURL = "https://sagehollow.world"
 defaultContentLanguage = "en"
+googleAnalytics = "G-PCV1L8TTX5"
+
 
 # pluralizeListTitles = "true" # hugo function useful for non-english languages, find out more in  https://gohugo.io/getting-started/configuration/#pluralizelisttitles
 
