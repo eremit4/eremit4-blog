@@ -15,7 +15,7 @@ title = "The Sage Hollow"
   image = "img/home2.png"
 headline = """<div class='intro-text'>
   <span class='line1'>Welcome, stranger.</span><br>
-  <span class='line2'>You’ve reached my quiet refuge at the edge of the digital wilderness — where shadows are studied, not feared.</span>
+  <span class='line2'>You’ve found my quiet refuge, where shadows are studied, not feared.</span>
 </div>"""
   links = [
     { github = "https://github.com/eremit4" },
