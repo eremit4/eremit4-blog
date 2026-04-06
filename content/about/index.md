@@ -6,13 +6,12 @@ draft: false
 
 ![The Sage Hollow](/img/cave.gif)
 
-I’m eremit4, an intelligence professional who walks between domains — from the human layer to the machine layer, from what is visible to what hides in the shadows.
+I’m eremit4, a threat intelligence professional who’s spent enough time across the human and machine layers to know that what you see is rarely the full story.
 
-My personal mission is to move quietly across digital terrain: tracking adversaries, uncovering hidden behaviors, dissecting malware, developing tools that sharpen my perception in the field, and confronting formidable enemies when the darkness demands it.
+I track adversaries, study their patterns, analyze malware, and build tools to see a little further than most really do. It’s quiet work, but someone has to do it.
 
-This space is my place of solitude — a dim refuge at the edge of the digital wilderness, where I record operations, findings, and missions that deserve to be preserved in written form for wandering strangers like you.
-Just be aware: not everything that hides in the dark wishes to remain unseen.
+This is my refuge, where I leave behind records of operations and findings for those curious enough to follow. Take what’s useful.
 
-All thoughts and opinions expressed here are entirely my own and do not represent any third parties.
+All opinions are my own and do not represent any third party.
 
 ![The Sage Hollow](/img/about.gif)
