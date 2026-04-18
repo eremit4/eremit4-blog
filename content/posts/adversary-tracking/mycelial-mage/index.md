@@ -8,13 +8,11 @@ tags:
   [
     "phishing",
     "outlook",
-    "c2",
-    "command-and-control",
     "telegram",
     "discord",
     "credential-theft",
-    "javascript",
-    "python"
+    "spanish-speaking",
+    "javascript"
   ]
 categories: ["Adversary Tracking"]
 ---

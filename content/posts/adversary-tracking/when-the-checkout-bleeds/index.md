@@ -8,11 +8,9 @@ images:
 region: ["LATAM"]
 tags:
   [
-    "skimming",
+    "digital-skimming",
     "magecart",
     "supply-chain",
-    "c2",
-    "command-and-control",
     "websocket",
     "javascript",
     "stealer-logs"
