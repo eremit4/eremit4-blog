@@ -1,6 +1,6 @@
 ---
 title: "What Comes After Cards: A Brazilian Magecart Operation Moves into Instant Payments (PIX)"
-date: 2026-04-12
+date: 2026-04-21
 draft: false
 featuredImage: "br-magecart-pix-cover.jpg"
 images:
