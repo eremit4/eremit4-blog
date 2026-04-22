@@ -63,6 +63,15 @@ Observed activity indicates the use of PIX hijacking, a technique in which the m
 
 Instead of relying on stolen card data that must be monetized later, the attacker can now receive funds immediately. The victim completes the payment believing it is legitimate, and the transfer is executed in real time to an attacker-controlled account, with limited chances of recovery.
 
+{{< figure
+src="img/pix-hijacking-flow.webp"
+alt="Flow diagram of PIX hijacking showing real-time QR code replacement and payment redirection during checkout."
+caption="Flow diagram illustrating PIX hijacking, where a malicious script replaces the original QR Code and copy-and-paste payment string in real time, redirecting funds to an attacker-controlled account."
+figclass="text-center"
+class="mx-auto"
+zoom="true"
+>}}
+
 For the merchant, the impact is characterized by a visibility gap. Since the order is successfully created in the system but the funds are diverted, the transaction appears as a 'pending' or 'abandoned' payment. This discrepancy often persists until customer complaints trigger a manual investigation, providing the actor with a significant window of opportunity.
 
 This misalignment can persist for days until the issue is identified and properly investigated. During this window, the attacker continues to operate and extract value. In high-traffic periods in Brazilian retail, such as Mother’s Day, Easter, or other seasonal events, even a short delay can translate into significant financial losses.
