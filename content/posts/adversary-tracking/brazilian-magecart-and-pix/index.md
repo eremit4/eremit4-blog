@@ -59,8 +59,9 @@ class="mx-auto"
 zoom="true"
 >}}
 
+Observed activity indicates the use of PIX hijacking, a technique in which the malicious script monitors user interactions during checkout and replaces the legitimate QR code and PIX copy-and-paste string with attacker-controlled values. This manipulation redirects the payment flow to an account under the attacker’s control, typically without raising suspicion, as the victim proceeds to scan the QR code or paste the PIX copy-and-paste string within their banking app on a smartphone, believing it is part of the normal transaction.
+
 Instead of relying on stolen card data that must be monetized later, the attacker can now receive funds immediately. The victim completes the payment believing it is legitimate, and the transfer is executed in real time to an attacker-controlled account, with limited chances of recovery.
-What was once data exfiltration becomes immediate financial theft.
 
 For the merchant, the impact is characterized by a visibility gap. Since the order is successfully created in the system but the funds are diverted, the transaction appears as a 'pending' or 'abandoned' payment. This discrepancy often persists until customer complaints trigger a manual investigation, providing the actor with a significant window of opportunity.
 
@@ -94,7 +95,7 @@ class="mx-auto"
 zoom="true"
 >}}
 
-In the case of PIX manipulation, the scripts act as an active proxy rather than a passive collector. The malware extracts the transaction value from the site’s Google Tag Manager dataLayer or local e-commerce objects and converts the total amount into cents. This standardized value is sent to the command and control server, which responds with a JSON payload containing both a custom-generated QR Code and a matching key string for PIX "Copia e Cola" (Copy and Paste).
+In the case of PIX hijacking, the scripts act as an active proxy rather than a passive collector. The skimmer extracts the transaction value from DOM elements within the e-commerce page and converts the total amount into cents. This standardized value is sent to the command-and-control server, which responds with a JSON payload containing both a custom-generated QR code and a corresponding copy-and-paste PIX payload.
 
 {{< figure
 src="img/pix-hijacking.webp"
