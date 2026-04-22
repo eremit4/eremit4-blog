@@ -76,7 +76,7 @@ A key characteristic is the reuse of infrastructure across domains. Scripts host
 
 To better understand this behavior, an interactive graph was generated to map relationships between command and control domains and anonymized merchants. The visualization also highlights infrastructure rotation over time, likely in response to domains being flagged or taken down.
 
-<div class="sage-graph"> <iframe src="/home/eremit4/PoCs/weezing-magecart/brazilian-magecart-and-pix-hijacking-graph.html" loading="lazy" style="width:100%; height:650px; border:none;"> </iframe> </div>
+<div class="sage-graph"> <iframe src="https://eremit4.github.io/eremit4-graphs/brazilian-magecart-and-pix-hijacking/bmaph-graph.html" loading="lazy" style="width:100%; height:650px; border:none;"> </iframe> </div>
 
 Not all nodes or domains listed are directly connected at the infrastructure level, due to the lack of observable infrastructure reuse in exfiltration paths and limited historical and temporal visibility across merchants in open-source data, preventing direct linkage to other domains. However, they share consistent code structure, obfuscation and exfiltration techniques, as well as file naming patterns, providing strong confidence that they are part of the same campaign.
 
