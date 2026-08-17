@@ -1,0 +1,37 @@
+{{ define "main" }}
+<section class="worldmap-page">
+  <h1>{{ .Title }}</h1>
+
+  <div class="worldmap-container">
+    <img src="/img/worldmap-magenta.png" alt="World map" class="worldmap-bg nozoom">
+
+    {{ range $term, $pages := site.Taxonomies.region }}
+      {{ $count := len $pages }}
+      {{ with index site.Data.worldmap_coords $term }}
+        <details class="worldmap-marker" style="left: {{ .x }}%; top: {{ .y }}%;">
+          <summary>
+            <span class="worldmap-dot"></span>
+            <span class="worldmap-count">{{ .name }} · {{ $count }}</span>
+          </summary>
+          <ul class="worldmap-article-list">
+            {{ range $pages }}
+              <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a></li>
+            {{ end }}
+          </ul>
+        </details>
+      {{ end }}
+    {{ end }}
+  </div>
+</section>
+
+<script>
+  // Close any open worldmap marker when clicking outside of it
+  document.addEventListener("click", function (event) {
+    document.querySelectorAll(".worldmap-marker[open]").forEach(function (marker) {
+      if (!marker.contains(event.target)) {
+        marker.removeAttribute("open");
+      }
+    });
+  });
+</script>
+{{ end }}

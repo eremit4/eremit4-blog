@@ -1,0 +1,274 @@
+argentina:
+  name: "Argentina"
+  x: 31.71
+  y: 87.17
+australia:
+  name: "Australia"
+  x: 89.24
+  y: 76.52
+austria:
+  name: "Austria"
+  x: 54.61
+  y: 18.56
+bangladesh:
+  name: "Bangladesh"
+  x: 76.79
+  y: 36.88
+belgium:
+  name: "Belgium"
+  x: 49.75
+  y: 14.64
+bolivia:
+  name: "Bolivia"
+  x: 31.68
+  y: 69.14
+brazil:
+  name: "Brazil"
+  x: 39.50
+  y: 79.72
+canada:
+  name: "Canada"
+  x: 19.14
+  y: 10.18
+chile:
+  name: "Chile"
+  x: 29.33
+  y: 84.83
+china:
+  name: "China"
+  x: 80.84
+  y: 27.37
+colombia:
+  name: "Colombia"
+  x: 28.62
+  y: 52.96
+costa-rica:
+  name: "Costa Rica"
+  x: 24.8
+  y: 47.79
+czech-republic:
+  name: "Czech Republic"
+  x: 56.3
+  y: 10.62
+denmark:
+  name: "Denmark"
+  x: 53.88
+  y: 8.61
+dominican-republic:
+  name: "Dominican Republic"
+  x: 30.21
+  y: 40.18
+ecuador:
+  name: "Ecuador"
+  x: 27.35
+  y: 57.49
+egypt:
+  name: "Egypt"
+  x: 59.25
+  y: 34.47
+finland:
+  name: "Finland"
+  x: 58.61
+  y: 5.53
+france:
+  name: "France"
+  x: 50.02
+  y: 19.47
+germany:
+  name: "Germany"
+  x: 54.24
+  y: 13.61
+greece:
+  name: "Greece"
+  x: 57.33
+  y: 24.88
+guatemala:
+  name: "Guatemala"
+  x: 23.86
+  y: 42.95
+india:
+  name: "India"
+  x: 73.56
+  y: 37.95
+indonesia:
+  name: "Indonesia"
+  x: 83.81
+  y: 56.52
+ireland:
+  name: "Ireland"
+  x: 47.27
+  y: 12.67
+israel:
+  name: "Israel"
+  x: 60.73
+  y: 30.19
+italy:
+  name: "Italy"
+  x: 54.77
+  y: 23.72
+japan:
+  name: "Japan"
+  x: 90.97
+  y: 26.39
+malaysia:
+  name: "Malaysia"
+  x: 80.01
+  y: 51.31
+mexico:
+  name: "Mexico"
+  x: 20.26
+  y: 36.65
+netherlands:
+  name: "Netherlands"
+  x: 51.79
+  y: 11.64
+nigeria:
+  name: "Nigeria"
+  x: 52.96
+  y: 48.47
+norway:
+  name: "Norway"
+  x: 51.99
+  y: 5.11
+pakistan:
+  name: "Pakistan"
+  x: 70.71
+  y: 31.11
+panama:
+  name: "Panama"
+  x: 27.39
+  y: 48.44
+paraguay:
+  name: "Paraguay"
+  x: 33.21
+  y: 74.93
+peru:
+  name: "Peru"
+  x: 28.33
+  y: 63.36
+philippines:
+  name: "Philippines"
+  x: 86.13
+  y: 45.36
+poland:
+  name: "Poland"
+  x: 56.66
+  y: 15.42
+portugal:
+  name: "Portugal"
+  x: 47.31
+  y: 23.46
+romania:
+  name: "Romania"
+  x: 58.02
+  y: 19.93
+russia:
+  name: "Russia"
+  x: 81.28
+  y: 5.79
+saudi-arabia:
+  name: "Saudi Arabia"
+  x: 63.24
+  y: 37.5
+singapore:
+  name: "Singapore"
+  x: 81.11
+  y: 55.91
+south-africa:
+  name: "South Africa"
+  x: 57.08
+  y: 80.79
+south-korea:
+  name: "South Korea"
+  x: 87.89
+  y: 26.63
+spain:
+  name: "Spain"
+  x: 49.86
+  y: 24.67
+sweden:
+  name: "Sweden"
+  x: 55.95
+  y: 5.32
+switzerland:
+  name: "Switzerland"
+  x: 52.41
+  y: 21.53
+thailand:
+  name: "Thailand"
+  x: 79.85
+  y: 42.65
+turkey:
+  name: "Turkey"
+  x: 60.7
+  y: 24.19
+uae:
+  name: "UAE"
+  x: 66.32
+  y: 37.2
+ukraine:
+  name: "Ukraine"
+  x: 59.71
+  y: 15.99
+united-kingdom:
+  name: "United Kingdom"
+  x: 49.36
+  y: 9.58
+united-states:
+  name: "United States"
+  x: 21.44
+  y: 23.87
+uruguay:
+  name: "Uruguay"
+  x: 33.97
+  y: 82.34
+venezuela:
+  name: "Venezuela"
+  x: 30.96
+  y: 50.48
+vietnam:
+  name: "Vietnam"
+  x: 81.76
+  y: 46.24
+
+# Macro-regions
+latam:
+  name: "LATAM"
+  x: 29.90
+  y: 62.99
+eu:
+  name: "EU"
+  x: 61.99
+  y: 26.99
+na:
+  name: "NA"
+  x: 20.95
+  y: 18.81
+apac:
+  name: "APAC"
+  x: 83.2
+  y: 42.07
+mea:
+  name: "MEA"
+  x: 60.64
+  y: 41.21
+asia:
+  name: "ASIA"
+  x: 78.38
+  y: 32.76
+middle-east:
+  name: "MIDDLE EAST"
+  x: 64.65
+  y: 33.22
+oce:
+  name: "OCE"
+  x: 91.88
+  y: 76.18
+cis:
+  name: "CIS"
+  x: 67.98
+  y: 11.08
+global:
+  name: "GLOBAL"
+  x: 50.31
+  y: 47.72

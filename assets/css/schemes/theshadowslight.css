@@ -1,8 +1,3 @@
-/* ============================================================
-   THE SHADOWS LIGHT — Biohazard Scheme (Code-Friendly Edition)
-   Cleaned & Organized Version
-   ============================================================ */
-
 /* ------------------------------------------------------------
    ROOT COLOR VARIABLES
    ------------------------------------------------------------ */
@@ -193,8 +188,8 @@ html {
    ============================================================ */
 
 /* Force size specifically for cave.png anywhere it appears */
-img[src*="cave.png"] {
-  width: 65px !important;   /* ← adjust manually */
+img[src*="home-title.png"] {
+  width: 150px !important;
   height: auto !important;
   display: block !important;
   margin: 0 auto !important;
@@ -214,4 +209,223 @@ img[src*="cave.png"] {
   height: 1100px;     
   border: none;
   display: block;
+}
+
+/* ------------------------------------------------------------
+   SITE TITLE — NEON HOVER (magenta)
+   ------------------------------------------------------------ */
+
+/* Selector built directly from the real DOM path:
+   /html/body/div[2]/div[2]/nav[1]/a → "The Sage Hollow" text link */
+body > div:nth-of-type(2) > div:nth-of-type(2) > nav > a {
+  transition: color 0.25s ease-out, text-shadow 0.25s ease-out !important;
+}
+
+body > div:nth-of-type(2) > div:nth-of-type(2) > nav > a:hover {
+  color: rgb(var(--color-primary-500)) !important;
+  text-shadow:
+    0 0 8px rgba(var(--color-primary-500), 0.9),
+    0 0 16px rgba(80, 20, 150, 0.6) !important;
+}
+/* ------------------------------------------------------------
+   HEADER LOGO IMAGE — NEON HOVER (magenta)
+   ------------------------------------------------------------ */
+
+/* Selector built directly from the real DOM path:
+   /html/body/div[2]/div[1]/a/img → logo image next to the site title */
+body > div:nth-of-type(2) > div:nth-of-type(1) > a > img {
+  transition: filter 0.25s ease-out, transform 0.25s ease-out !important;
+}
+
+body > div:nth-of-type(2) > div:nth-of-type(1) > a:hover > img {
+  filter:
+    drop-shadow(0 0 8px rgba(var(--color-primary-500), 0.9))
+    drop-shadow(0 0 16px rgba(80, 20, 150, 0.6)) !important;
+  transform: scale(1.05) !important;
+}
+
+/* ------------------------------------------------------------
+   WORLDMAP PAGE — GREEN NEON MARKERS
+   ------------------------------------------------------------ */
+
+:root {
+  --worldmap-accent: 57, 255, 90; /* neon hacker-green */
+}
+
+.worldmap-container {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  margin: 2rem auto;
+  aspect-ratio: 2236 / 1160;
+}
+
+.worldmap-bg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+  filter: drop-shadow(0 0 20px rgba(var(--worldmap-accent), 0.25));
+  cursor: default !important;
+}
+
+.worldmap-marker {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.worldmap-marker[open] {
+  z-index: 50;
+}
+
+.worldmap-marker summary {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  list-style: none;
+}
+
+.worldmap-marker summary::-webkit-details-marker {
+  display: none;
+}
+
+.worldmap-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgb(var(--worldmap-accent));
+  box-shadow:
+    0 0 6px rgba(var(--worldmap-accent), 0.9),
+    0 0 12px rgba(20, 120, 50, 0.6);
+  flex-shrink: 0;
+  transition: box-shadow 0.2s ease-out, transform 0.2s ease-out;
+}
+
+.worldmap-marker:hover .worldmap-dot,
+.worldmap-marker[open] .worldmap-dot {
+  box-shadow:
+    0 0 14px rgba(var(--worldmap-accent), 1),
+    0 0 24px rgba(20, 120, 50, 0.8);
+  transform: scale(1.3);
+}
+
+/* Text label hidden by default — only the dot is always visible.
+   This is what keeps dense areas (Europe, Middle East, Asia) from
+   visually colliding: labels only appear one at a time, on demand. */
+.worldmap-count {
+  margin-left: 8px;
+  background: rgba(8, 20, 12, 0.92);
+  border: 1px solid rgba(var(--worldmap-accent), 0.6);
+  color: rgb(180, 255, 195);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 1px 8px;
+  border-radius: 8px;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateX(-4px);
+  pointer-events: none;
+  transition: opacity 0.15s ease-out, transform 0.15s ease-out;
+}
+
+.worldmap-marker:hover .worldmap-count,
+.worldmap-marker[open] .worldmap-count {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.worldmap-article-list {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 8px;
+  min-width: 220px;
+  max-width: 280px;
+  background: rgba(8, 20, 12, 0.97);
+  border: 1px solid rgba(var(--worldmap-accent), 0.6);
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(var(--worldmap-accent), 0.4);
+  padding: 10px 12px;
+  list-style: none;
+}
+
+.worldmap-article-list li + li {
+  margin-top: 6px;
+  padding-top: 6px;
+  border-top: 1px solid rgba(var(--worldmap-accent), 0.2);
+}
+
+.worldmap-article-list a {
+  color: rgb(180, 255, 195) !important;
+  font-size: 0.8rem;
+  text-decoration: none !important;
+  line-height: 1.3;
+}
+
+.worldmap-article-list a:hover {
+  color: rgb(255, 255, 255) !important;
+  text-shadow: 0 0 6px rgba(var(--worldmap-accent), 0.8);
+}
+
+/* Radar-style pulse on the map markers */
+.worldmap-dot {
+  position: relative;
+  animation: worldmap-dot-beat 1.6s ease-in-out infinite;
+}
+
+.worldmap-dot::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgb(var(--worldmap-accent));
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 0.8;
+  animation: worldmap-radar-pulse 1.6s ease-out infinite;
+  pointer-events: none;
+}
+
+@keyframes worldmap-radar-pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(3.8);
+    opacity: 0;
+  }
+}
+
+/* The center dot itself also breathes in size/brightness */
+@keyframes worldmap-dot-beat {
+  0%, 100% {
+    transform: scale(1);
+    filter: brightness(1);
+  }
+  50% {
+    transform: scale(1.35);
+    filter: brightness(1.4);
+  }
+}
+
+/* Slight stagger so nearby markers don't all pulse in perfect unison */
+.worldmap-marker:nth-of-type(2n) .worldmap-dot,
+.worldmap-marker:nth-of-type(2n) .worldmap-dot::before {
+  animation-delay: 0.4s;
+}
+.worldmap-marker:nth-of-type(3n) .worldmap-dot,
+.worldmap-marker:nth-of-type(3n) .worldmap-dot::before {
+  animation-delay: 0.8s;
+}
+/* Slight stagger so nearby markers don't all pulse in perfect unison */
+.worldmap-marker:nth-of-type(2n) .worldmap-dot::before {
+  animation-delay: 0.6s;
+}
+.worldmap-marker:nth-of-type(3n) .worldmap-dot::before {
+  animation-delay: 1.2s;
 }

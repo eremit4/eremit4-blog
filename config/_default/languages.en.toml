@@ -8,19 +8,18 @@ title = "The Sage Hollow"
   isoCode = "en"
   rtl = false
   dateFormat = "2 January 2006"
-  logo = "img/cave.png"
+  logo = "img/home-title.png"
 
 [params.author]
   name = "eremit4"
   image = "img/home2.png"
 headline = """<div class='intro-text'>
   <span class='line1'>Welcome, stranger.</span><br>
-  <span class='line2'>You’ve found my quiet refuge, where shadows are studied, not feared.</span>
 </div>"""
   links = [
-    { github = "https://github.com/eremit4" },
     { x-twitter = "https://x.com/_eremit4" },
   ]
+  #   github = "your github url"
   #   email = "youremail@example.com"
   #   imageQuality = 96
   #   bio = "A little bit about you"
