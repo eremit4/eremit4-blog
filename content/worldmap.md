@@ -1,5 +1,4 @@
 ---
-title: "Worldmap"
 layout: "worldmap"
 showDate: false
 showAuthor: false
