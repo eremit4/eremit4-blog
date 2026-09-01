@@ -7,6 +7,7 @@ region: ["LATAM", "EU"]
 tags:
   [
     "phishing",
+    "AI-assisted",
     "outlook",
     "telegram",
     "discord",
@@ -18,7 +19,7 @@ categories: ["Adversary Tracking"]
 ---
 
 ## Introduction
-In this scroll, I record the beginning of a hunt that took shape in August 2025, when early signs of a Spanish-speaking phishing kit surfaced from obscurity. What followed revealed clear targeting patterns, operational fingerprints, and subtle indicators of AI-assisted development, along with the use of Telegram and Discord as command and control channels, a trend increasingly common in the wild.
+In this research, I record the beginning of a hunt that took shape in August 2025, when early signs of a Spanish-speaking phishing kit surfaced from obscurity. What followed revealed clear targeting patterns, operational fingerprints, and subtle indicators of AI-assisted development, along with the use of Telegram and Discord as command and control channels, a trend increasingly common in the wild.
 
 ## Where the Trail Begins
 I often invest part of my free time observing threats that rise above the background noise, and during one of these sessions I encountered yet another kit targeting Microsoft Outlook users, and this one clearly shaped for Hispanic victims.
@@ -56,7 +57,7 @@ Based on the data available, the earliest observable activity dates back to Marc
 
 While this volume confirms active use, raw counts alone are insufficient to distinguish between scattered reuse and a coordinated campaign. To answer that, the investigation shifted from where the kit appeared to how it evolved.
 
-#### The Spore — xjsx.js
+#### The Spore - xjsx.js
 In the earliest observed deployments, credential exfiltration is supported by a small auxiliary script named `xjsx.js`. This file contains almost no execution logic. Instead, it serves as a configuration container for the operator’s Telegram Bot Token and Chat ID, assigned to global variables after light obfuscation (array rotation).
 
 At this stage, the architecture is modular. Configuration is separated from execution, suggesting an early focus on operational convenience. Tokens can be rotated without modifying the core phishing logic.
@@ -75,7 +76,7 @@ At this stage, the architecture is modular. Configuration is separated from exec
     class="mx-auto"
 >}}
 
-#### A Hardened Strain — tlgram.js
+#### A Hardened Strain - tlgram.js
 Later deployments preserve the original separation of responsibilities but significantly harden the Telegram component. The script introduces layered anti-analysis measures to conceal Telegram credentials and critical logic.
 
 These measures include dynamic construction of `debugger` statements triggered when DevTools are open, console method hijacking to suppress runtime visibility (`log`, `warn`, `info`, `error`, etc.), and self-referential regex traps designed to trigger catastrophic backtracking during source inspection. Together, these mechanisms degrade both static analysis and interactive debugging, without altering the underlying exfiltration workflow.
@@ -108,7 +109,7 @@ The persistence of this unmasked code, alongside the consistent comment signatur
     class="mx-auto"
 >}}
 
-#### An Exposed Strain — disBLOCK.js
+#### An Exposed Strain - disBLOCK.js
 The most recent evolution replaces Telegram-based exfiltration with Discord webhooks.
 
 In `disBLOCK.js`, the underlying logic reappears largely unchanged, but the script is entirely unobfuscated. Functions are clearly named, indentation is consistent, and explanatory comments in Spanish describe each stage of execution. The structure strongly resembles AI-assisted code generation rather than organically evolved tooling.
